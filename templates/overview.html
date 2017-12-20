@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" type="image/png" href="img/icon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BNAV | BRCA Risk Navigation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/custom-styles.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+	  <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/font-awesome-ie7.css">
+
+      <script src="js/jquery.mobilemenu.js"></script>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <script>
+    $(document).ready(function(){
+        $('.menu').mobileMenu();
+    });
+  </script>
+
+  </head>
+
+  <body>
+    <font face="helvetica">
+    <div id="headerlinks">
+      <div style="text-align:left;">
+        <a href="http://www.columbia.edu/"><img src="hl.png" height="11px"> Columbia University in the City of New York</a>
+      <span style="float:right;">
+        <a href="overview.html">About BNAV</a> |
+        <a href="team.html">Our Team</a> |
+        <a href="contact.html">Contact Us </a></span></div>
+      </div>
+    <div class="header-wrapper">
+      <div class="site-name">
+        <!--<h1>sitename</h1>
+        <h2>lorem ipsum dolor sit amet vivamus</h2>-->
+        <a href="index.html"><img src="img/BNAV_W.png" style="zoom: 0.45"></a></font>
+      </div>
+      <!--Search Bar START/-->
+       <div id="headersearch">
+          <font face="helvetica">
+            <form align="right" method="get" action="http://search.columbia.edu/search">
+            <input type="text" name="q" alt="Search" value="" maxlength="256" size="32" />
+            <input type="submit" name="btnG" value="Search" />
+            <input type="hidden" name="site" value="Columbia" />
+            <input type="hidden" name="client" value="columbia" />
+            <input type="hidden" name="proxystylesheet" value="columbia2" />
+            <input type="hidden" name="output" value="xml_no_dtd" />
+            <input type="hidden" name="filter" value="0" />
+            </form>
+          </font>
+        </div>
+      <!--Search Bar END/-->
+    </div>
+    <div class="menu">
+      <div class="navbar">
+        <div class="container-menu">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <i class="fw-icon-th-list"></i>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <div class="container-menu"><b>
+                <a href="index.html">HOME</a>
+                <div class="dropdown">
+                  <button class="dropbtn">ABOUT</button>
+                  <div class="dropdown-content">
+                    <a href="overview.html">Overview</a>
+                    <a href="team.html">Investigative Team</a>
+                    <a href="studies.html">Our Studies</a>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <button class="dropbtn">LECTURES</button>
+                  <div class="dropdown-content">
+                    <a href="chemo.html">Chemoprevention</a>  <!--Change pages-->
+                    <a href="genetic.html">Genetic Testing</a>
+                    <a href="screen.html">Screening</a>
+                    <a href="pcc.html">Patient-Centered Care</a>
+                  </div>
+                </div>
+                <a href="patients.html">MY PATIENTS</a>
+                <a href="download.html">DOWNLOADS</a>
+                <a href="contact.html">CONTACT</a>
+                </b>
+              </div>
+            </ul>
+          </div><!--/.navbar-collapse -->
+        </div>
+      </div>
+      <div class="mini-menu">
+            <label>
+          <select class="selectnav" onchange="location = this.value;">
+            <option value="index.html">Home</option>
+            <option value="#">About</option>
+            <option value="overview.html" selected="">→ Overview</option>
+            <option value="team.html">→ Investigative Team</option>
+            <option value="studies.html">→ Our Studies</option>
+            <option value="#">Lectures</option>
+            <option value="chemo.html">→ Chemoprevention</option>
+            <option value="genetic.html">→ Genetic Testing</option>
+            <option value="screen.html">→ Screening</option>
+            <option value="pcc.html">→ Patient-Centered Care</option>
+            <option value="patients.html">My Patients</option>
+            <option value="download.html">Downloads</option>
+            <option value="contact.html">Contact</option>
+          </select>
+          </label>
+          </div>
+    </div>
+
+<!--END HEADER: COPY&PASTE FROM BEGINNING TO HERE TO ALL OTHER PAGES & CHANGE SELECTED=""-->
+
+<!--BEGIN EDITING BODY-->
+        <div class="container">
+          <div class="featured-item">
+            <div class="col-lg-12">
+              <div class="block">
+                <div class="block-title">
+                    <h1>Overview</h1><br>
+                    <h2>The Breast Cancer Risk Navigation (BNAV) tool is a web-based decision support tool with modules that present pertinent information for primary care providers regarding breast cancer risk assessment and preventative measures for their patients.</h2>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-2"><img src="img/overview/web.jpg" height=150px width=150px></div>
+                      <div class="col-md-10">
+                        <h2><b>Increasing Breast Cancer Chemoprevention in the Primary Care Setting</b><br>(NIH/NCI R01 CA177995-01A1)</h2>
+                        The purpose of this randomized controlled trial is to evaluate a web-based patient-centered decision aid (RealRisks) designed to inform patients about breast cancer risk and chemoprevention with estrogen-blocking drugs, such as tamoxifen. It is coupled with a physician-centered decision support tool, BNAV, to enhance shared decision-making about chemoprevention in the primary care setting. The investigators hypothesize that improving accuracy of breast cancer risk perceptions and understanding of the risks and benefits of breast cancer chemoprevention will increase the uptake and informed choice about chemoprevention among high-risk women in the primary care setting. <br>
+                         <br></div>
+                      <div class="col-md-2"><img src="img/overview/diversity.png" height=150px width=150px></div>
+                      <div class="col-md-10">
+                        <h2><b>Decision Support for BRCA Testing in Ethnically Diverse Women</b><br>(American Cancer Society, RSG-17-103-01)</h2>
+                        The objective of this research study is to expand BRCA genetic testing for women who are at increased risk of breast and ovarian cancer due to their family history of cancer. We propose to promote referrals to genetic counseling by primary care providers (PCPs) and appropriate genetic testing for hereditary breast and ovarian cancer (HBOC). We intend to increase referrals in primary care clinics by using a patient-centered decision aid called RealRisks and a provider-centered BNAV decision support tool, along with an electronic health record (EHR)-embedded Ambulatory Medicine dashboard. We hypothesize that combining a patient-centered decision aid with a provider-centered decision support tool integrated into clinic workflow will increase appropriate uptake of genetic counseling among racially and ethnically diverse women. <br>
+                        <br><b>Links:</b><br>https://recruit.cumc.columbia.edu/clinical_trial/1057<br>
+
+                      </div>
+                    </div>
+
+
+                </div>
+
+                    <br>
+              </div>
+            </div>
+          </div>
+          <div class="ruler"></div>
+        </div>
+      </div>
+      <!--/Footer Start: Copy from here to end and paste for every page-->
+            <div class="copy-rights">
+            <div class="container">
+              <div class="row">
+
+                <div class="col-md-8">
+                  630 W 168th St, New York, NY 10032, USA<br><a href="http://www.columbia.edu"> © 2017 Columbia University</a>
+                </div>
+
+                  <div class="col-md-4">
+                    Template by <a href="http://www.alltemplateneeds.com">www.alltemplateneeds.com</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            </div>
+
+
+          <!-- Bootstrap core JavaScript
+          ================================================== -->
+          <!-- Placed at the end of the document so the pages load faster -->
+          <script src="js/jquery-1.9.1.js"></script>
+          <script src="js/bootstrap.js"></script>
+          <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+
+        </body>
+      </html>

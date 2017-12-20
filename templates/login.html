@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+    .header
+    {
+    width:auto; height:200px; background-color:#339999;line-height:300px;
+    }
+    .xian{width:auto; height:10px; background-color:#888888; margin: 10 auto;}
+    ul{
+    border-radius:5px;
+    margin:0 20px;
+    width:400px;
+    height:200px;
+    background-color:#888888;
+    opacity: 0.85;
+    }
+    footer {position: relative;bottom: 0;}
+    </style>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+  <div class="header">
+    <ul><h1 style="color:#222222">Login</h1></ul>
+  </div>
+  <div class="xian"></div>
+    <div class="container">
+
+      <br>
+      <form action="" method="post">
+      <p>Click <a href="/">here</a> to go home.</p>
+      <input type="text" name="username" text="UserName">
+      <input type="password" name="password" text="Password">
+      <input type="submit" value="Login">
+      </form>
+      {% if error %}
+         <p class="error"><strong>Error:</strong>{{error}}
+      {% endif %}
+    </div>
+  </body>
+  <footer>
+    <p> © 2017 WeShop. All rights reserved.</p>
+  </footer>
+</html>

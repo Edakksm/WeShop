@@ -1,0 +1,48 @@
+<html>
+<meta charset="UTF-8">
+  <style>
+
+    .xian{width:auto; height:10px; background-color:#888888; margin: 10 auto;}
+
+    table{
+    border:2px solid #339999;
+    border-radius:10px;
+    margin:10px;
+    }
+    footer {position: relative;bottom: 0;}
+  </style>
+
+
+<body bgcolor="powderblue">
+  <form method="post" name="AddFriends">
+      <div style="width:230px;height:200px;margin:10px 30px;border:6px solid #339999;border-radius:70px;
+      text-align:center;">
+          <img src="/static/AddFriend.jpg" style="width:200px;height:200px;">
+      </div>
+  <div class="xian"></div>
+  <div>
+    <table border="1">
+     <tr>
+         <td><strong>Username</strong></td>
+         <td><strong>Name</strong></td>
+         <td><strong>Phone Number</strong></td>
+    </tr>      
+    {% for n in data %}
+     <tr>
+         <td>{{n[0]}}</td>
+         <td>{{n[1]}} {{n[2]}}</td>
+         <td>{{n[3]}}</td>
+         <td><input type="checkbox" id="FriendId" name="FriendId" text="Add Friend" value={{n[0]}}></td>
+    </tr>
+    {% endfor %}
+   </table>
+  </div>
+ <input type="submit" value="AddFriends" name="Add Friends" style="margin:10px 10px;width:100px;font-size:14px;">
+      <p>Click <a href="/homepage">here</a> to go back home.</p>
+
+</form>
+</body>
+<footer>
+    <p>© 2017 WeShop. All rights reserved.</p>
+</footer>
+</html>

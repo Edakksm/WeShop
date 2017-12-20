@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta charset="utf-8">
+  <style>
+
+    .header
+    {
+    width:auto; height:200px; background-color:#339999;line-height:200px;
+    }
+    .xian{width:auto; height:10px; background-color:#888888; margin: 10 auto;}
+    ul{
+    border-radius:15px;
+    margin:0 20px;
+    width:300px;
+    height:180px;
+    background-color:#888888;
+    opacity: 0.85;
+    float:left;
+    }
+    th{height:30px;border:2px solid #339999;}
+    footer {position: relative;bottom: 0;}
+  </style>
+</head>
+
+<body>
+  <form method="post" name="FriendList">
+
+      <div class="header">
+          <ul><h1 style="color:#222222">Friend List</h1></ul>
+          <img src="/static/FriendList.jpg" style=" width:200px;height:200px;float:right;">
+
+      </div>
+      <div class="xian"></div>
+
+  <div>
+    <table border="1">
+     <tr>
+         <th><strong>Username</strong></th>
+         <th><strong>Name</strong></th>
+         <th><strong>Phone Number</strong></th>
+    </tr>      
+    {% for n in data %}
+     <tr>
+         <td>{{n[0]}}</td>
+         <td>{{n[1]}} {{n[2]}}</td>
+         <td>{{n[3]}}</td>
+    </tr>
+    {% endfor %}
+   </table>
+  </div>
+
+<p><a href="/addfriends">Add Friends</a></p>
+      <p>Click <a href="/homepage">here</a> to go home.</p>
+
+</form>
+</body>
+<footer>
+    <p>© 2017 WeShop. All rights reserved.</p>
+</footer>
+</html>

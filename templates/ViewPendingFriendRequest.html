@@ -1,0 +1,65 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+  <link href="/static/css/bootstrap.css" rel="stylesheet" media="screen">
+  <style>
+    .pic
+    {
+    width:auto; height:200px; background-color:#339999;
+    }
+    .xian{width:auto; height:10px; background-color:#888888; margin: 10 auto;}
+
+    table{
+    width:60%;
+    border-radius:5px;
+    box-shadow: 10px 10px 5px #888888;
+    margin:10px;
+    }
+    th
+    {
+    color:#333333;
+    background-color:#779999;
+	height:50px;
+	}
+	footer {position: relative;bottom: 0;}
+
+  </style>
+</head>
+
+<body>
+  <form method="post" name="AddFriends">
+  <div class="pic">
+  <ul style="float:left; width:600px; border-radius:17px; height:170px; background-color:#888888; ">
+      <h1 style=" color:#222222;line-height:200px; line-width:200px;">Friend requests</h1>
+  </ul>
+  <img src="/static/AddFriend.jpg" style=" width:200px;height:200px;border-radius:7px;float:right;">
+
+  </div>
+  <div class="xian"></div>
+  <div>
+    <table border="1" solid black>
+     <tr>
+         <th><strong>Username</strong></th>
+         <th><strong>Name</strong></th>
+         <th><strong>Phone Number</strong></th>
+         <th><strong>Select</strong></th>
+    </tr>      
+    {% for n in data %}
+     <tr>
+         <td>{{n[0]}}</td>
+         <td>{{n[1]}} {{n[2]}}</td>
+         <td>{{n[3]}}</td>
+         <td><input type="checkbox" id="FriendId" name="FriendId" text="Add Friend" value={{n[0]}}></td>
+    </tr>
+    {% endfor %}
+   </table>
+  </div>
+ <input type="submit" value="ConfirmFriends" name="Confirm Friend Request">
+
+</form>
+</body>
+
+<footer>
+    <span>© 2017 WeShop. All rights reserved.</span>
+</footer>
+</html>

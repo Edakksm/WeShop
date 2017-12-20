@@ -1,0 +1,115 @@
+<html>
+<head>
+  <style>
+
+    .header
+    {
+    width:auto; height:200px; background-color:#339999;
+    }
+    .xian{width:auto; height:10px; background-color:#888888; margin: 10 auto;}
+    p.haha
+    {
+    margin:5px auto;
+    text-align:center;
+    width:200px;
+    height:20px;
+    border:2px solid #339999;
+    border-radius:10px;
+    }
+    .diff
+    {
+    background-color:white;
+    margin:10px 10px;
+    text-align:center;
+    border:4px solid #339999;
+    border-radius:7px;
+    float:left;
+    }
+    table{
+
+    }
+    th{height:30px;border:2px solid #339999;}
+    footer {position: relative;bottom: 0;}
+  </style>
+  <meta charset="UTF-8">
+</head>
+
+<body bgcolor="powderblue">
+  <form action="main_event_status" method="POST" name="main_event_status">
+      <div class="header">
+          <ul style="width:300px;height:180px;background-color:#888888;border-radius:20px; margin:0 20px;">
+              <h1 style="color:#333333;line-height:250px; line-width:200px;"> Events status</h1>
+          </ul>
+          <p></p>
+      </div>
+      <div class="xian"></div>
+  <div class="diff">
+      <p class="haha">Events host by you:</p>
+      <table border="1">
+
+        {% for n in host %}
+        <tr>
+            <td>{{n}}</td>
+        </tr>
+        {% endfor %}
+        <th><a href="/event_status_detail">See detail</a></th>
+      </table>
+  </div>
+
+
+  <div class="diff">
+      <p class="haha">Invitations:</p>
+      <table border="1">
+          <tr>
+              <th><input type="submit" value="confirm" name="eventDecision"></th>
+          </tr>
+          <tr>
+              <td>Event Name</td>
+              <td>Location</td>
+              <td>Time</td>
+              <td>Accept/Decline</td>
+          </tr>
+          {% for n in pending %}
+          <tr>
+            <td>{{n[0]}}</td>
+            <td>{{n[1]}}</td>
+            <td>{{n[2]}}</td>
+            <td>
+                <select name = {{n[0]}}>
+                    <option value="yes">accept</option>
+                    <option value="no">decline</option>
+                </select>
+            </td>
+          </tr>
+          {% endfor %}
+      </table>
+  </div>
+
+  <div class="diff">
+      <p class="haha">Accepted event:</p>
+      <table border="1">
+          <tr>
+              <td>Event Name</td>
+              <td>Location</td>
+              <td>Time</td>
+          </tr>
+          {% for n in accepted %}
+          <tr>
+            <td>{{n[0]}}</td>
+            <td>{{n[1]}}</td>
+            <td>{{n[2]}}</td>
+          </tr>
+          {% endfor %}
+      </table>
+  </div>
+<div style="clear:both">
+<p><a href="/create_event">Create another event</a></p>
+<p>Click <a href="/homepage">here</a> to go home.</p>
+</div>
+
+</form>
+</body>
+  <footer>
+    <p> © 2017 WeShop. All rights reserved.</p>
+  </footer>
+</html>

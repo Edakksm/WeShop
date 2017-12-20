@@ -1,0 +1,108 @@
+<html>
+  <meta charset="utf-8">
+  <style>
+  .header
+    {
+    width:auto; height:200px; background-color:#339999;line-height:300px;
+    }
+    .xian{width:auto; height:10px; background-color:#888888; margin: 10 auto;}
+    ul{
+    border-radius:15px;
+    margin:0 20px;
+    width:300px;
+    height:180px;
+    background-color:#888888;
+    opacity: 0.85;
+    }
+    table.in{
+    border:2px solid #339999;
+    border-radius:10px;
+    }
+    footer {position: relative;bottom: 0;}
+  </style>
+
+
+<body>
+  <form method="post" name="AddFriends">
+      <div class="header">
+          <ul><h1 style="color:#222222">Event detail</h1></ul>
+
+      </div>
+      <div class="xian"></div>
+
+  <div>
+    <table class="in">
+
+    {% for n in alldata %}
+        <table border="1">
+        <tr>
+            <tr>
+            <td>Event Name</td>
+            <td>{{n.event_name}}</td>
+            </tr>
+
+            <tr>
+            <td>Event Timd</td>
+            <td>{{n.event_time}}</td>
+            </tr>
+
+            <tr>
+            <td>Event Location</td>
+            <td>{{n.event_location}}</td>
+            </tr>
+
+            <tr>
+                <td>Member Status</td>
+                <td>
+                <table border="1">
+                    <tr>
+                        <td>pending:</td>
+                        <td>
+                            <table class="in">
+                                {% for m in n.event_member_status.pending %}
+                                <tr><tb>{{m}}</tb></tr>
+                                {%endfor%}
+                            </table>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>accepted:</td>
+                        <td>
+                            <table class="in">
+                            {% for m in n.event_member_status.accepted %}
+                                <tr><tb>{{m}}</tb></tr>
+                            {%endfor%}
+                            </table>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>declined:</td>
+                        <td>
+                            <table class="in">
+                            {% for m in n.event_member_status.declined %}
+                                <tr><tb>{{m}}</tb></tr>
+                            {%endfor%}
+                            </table>
+
+                        </td>
+                    </tr>
+                </table>
+                </td>
+
+            </tr>
+        </tr>
+        </table>
+    {% endfor %}
+
+
+    </table>
+  </div>
+<p>Click <a href="/homepage">here</a> to go home.</p>
+</form>
+</body>
+<footer>
+    <p>© 2017 WeShop. All rights reserved.</p>
+</footer>
+</html>

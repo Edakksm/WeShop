@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>SignUp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <style>
+    .header
+    {
+    width:auto; height:200px; background-color:#339999;
+    }
+    .xian{width:auto; height:10px; background-color:#888888; margin: 10 auto;}
+
+    table{margin:20px 40px;}
+    td{
+    border:1px solid #339999;
+    border-radius:5px;
+    color:#444444;
+    }
+    footer {position: relative;bottom: 0;}
+    </style>
+  </head>
+  <body bgcolor="powderblue">
+  <div class="header">
+    <ul style="width:300px;height:180px;background-color:#888888;border-radius:20px; margin:0 20px;">
+      <h1 style="color:#333333;line-height:250px; line-width:200px;">   SignUp</h1>
+    </ul>
+  </div>
+    <div class="xian"></div>
+    <div class="container">
+      <br>
+       <form action="/signup" method="POST" name="signup">
+         <div style="border:3px solid #888888;border-radius:5px; width:300px; margin:30px;">
+        <table>
+          <tr>
+            <td>FirstName</td><td><input type="text" name="firstname"></td>
+          </tr>
+          <tr>
+            <td>LastName</td><td><input type="text" name="lastname"></td>
+          </tr>
+          <tr>
+            <td>Building</td><td> <input type="building" name="building"></td>
+          </tr>
+          <tr>
+            <td>Street</td><td><input type="text" name="street"></td>
+          </tr>
+          <tr>
+            <td>City</td><td><input type="text" name="city"></td>
+          </tr>
+          <tr>
+            <td>State</td><td><input type="text" name="state"></td>
+          </tr>
+          <tr>
+            <td>ZipCode</td><td><input type="text" name="zipcode"></td>
+          </tr>
+          <tr>
+            <td>Phone</td><td><input type="text" name="phone"></td>
+          </tr>
+          <tr>
+            <td>UserName</td><td><input type="text" name="userId"></td>
+          </tr>
+          <tr>
+            <td>Password</td><td><input type="password" name="password"></td>
+          </tr>
+          <tr>
+            <th> <input type="submit" value="SignUp" name="SignUp" id="SignUp"></th>
+          </tr>
+        </table>
+         </div>
+     
+      <p>Click <a href="/">here</a> to go home.</p>
+     
+      </form>
+      {% if error %}
+         <p class="error"><strong>Error:</strong>{{error}}
+      {% endif %}
+    </div>
+  </body>
+
+  <footer>
+    <span> © 2017 WeShop. All rights reserved.</span>
+  </footer>
+</html>
